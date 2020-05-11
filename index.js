@@ -1,10 +1,10 @@
-bruconst Discord = require('discord.js');
+const Discord = require('discord.js');
 const client = new Discord.Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
 var prefix = '/'
 const delay = require('delay');
 const bot = new Discord.Client();
 const newUsers = new Discord.Collection();
-var TOKEN = ('Njk2MjgzNDE2MTg5OTkzMDAw.Xrb7eg.i9LtgZnaIHpNcn7LvppoMTyOPQc')
+var TOKEN = ('Njk2MjgzNDE2MTg5OTkzMDAw.XrmFVw.0jWsxorcmqPAySZpQ2048PGv_-A')
 //Njk2MjgzNDE2MTg5OTkzMDAw.XoxKnA.8Esirrv_UjWawilQPnfBP1GG_tg
 const ms = require("ms");
 var version = ("1.0")
