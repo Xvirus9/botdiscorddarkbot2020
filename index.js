@@ -4,7 +4,7 @@ var prefix = '/'
 const delay = require('delay');
 const bot = new Discord.Client();
 const newUsers = new Discord.Collection();
-var TOKEN = ('Njk2MjgzNDE2MTg5OTkzMDAw.XrmFVw.0jWsxorcmqPAySZpQ2048PGv_-A')
+var token = ('Njk2MjgzNDE2MTg5OTkzMDAw.XrmGVg.nwqli35Z_1PJVk_zzZGyykwYrw4')
 //Njk2MjgzNDE2MTg5OTkzMDAw.XoxKnA.8Esirrv_UjWawilQPnfBP1GG_tg
 const ms = require("ms");
 var version = ("1.0")
