@@ -1,10 +1,10 @@
-const Discord = require('discord.js');
+bruconst Discord = require('discord.js');
 const client = new Discord.Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
 var prefix = '/'
 const delay = require('delay');
 const bot = new Discord.Client();
 const newUsers = new Discord.Collection();
-var token = ('Njk2MjgzNDE2MTg5OTkzMDAw.XoxKnA.8Esirrv_UjWawilQPnfBP1GG_tg')
+var token = ('Njk2MjgzNDE2MTg5OTkzMDAw.Xrb7eg.i9LtgZnaIHpNcn7LvppoMTyOPQc')
 //Njk2MjgzNDE2MTg5OTkzMDAw.XoxKnA.8Esirrv_UjWawilQPnfBP1GG_tg
 const ms = require("ms");
 var version = ("1.0")
@@ -16,13 +16,8 @@ client.on('ready', function () {
     client.user.setActivity("Use " + prefix + "help | V " + version)
 })
 
-client.on('message', message => {
-    if (message.content === '/join') {
-        client.emit('guildMemberAdd', message.member);
-    }
-});
 
-client.on('guildMemberAdd', member => {
+bot.on('guildMemberAdd', member => {
     
     
 
@@ -34,7 +29,7 @@ client.on('guildMemberAdd', member => {
             .setTimestamp(new Date())
             .setFooter("© L'OLYMPIOME 2020 - 2021")
 
-    member.guild.channels.find("701856722230313071", "701865379039019169").send(embed)
+    member.guild.channels.find("name", "✨┃bienvenue").send(embed)
     
 
 });
