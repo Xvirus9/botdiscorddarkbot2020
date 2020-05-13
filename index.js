@@ -4,7 +4,7 @@ var prefix = '/'
 const delay = require('delay');
 const bot = new Discord.Client();
 const newUsers = new Discord.Collection();
-var token = ('Njk2MjgzNDE2MTg5OTkzMDAw.XrmGVg.nwqli35Z_1PJVk_zzZGyykwYrw4')
+var token = ('Njk2MjgzNDE2MTg5OTkzMDAw.XrmGpQ._9GKVTp2zc-naCvnZy0z-6f1LrI')
 //Njk2MjgzNDE2MTg5OTkzMDAw.XoxKnA.8Esirrv_UjWawilQPnfBP1GG_tg
 const ms = require("ms");
 var version = ("1.0")
@@ -16,23 +16,62 @@ client.on('ready', function () {
     client.user.setActivity("Use " + prefix + "help | V " + version)
 })
 
+const AntiSpam = require('discord-anti-spam');
+const antiSpam = new AntiSpam({
+    warnThreshold: 4, // Amount of messages sent in a row that will cause a warning.
+    kickThreshold: 7, // Amount of messages sent in a row that will cause a ban.
+    banThreshold: 7, // Amount of messages sent in a row that will cause a ban.
+    maxInterval: 2000, // Amount of time (in milliseconds) in which messages are considered spam.
+    warnMessage: '{@user}, Please stop spamming.', // Message that will be sent in chat upon warning a user.
+    kickMessage: '**{user_tag}** has been kicked for spamming.', // Message that will be sent in chat upon kicking a user.
+    banMessage: '**{user_tag}** has been banned for spamming.', // Message that will be sent in chat upon banning a user.
+    maxDuplicatesWarning: 7, // Amount of duplicate messages that trigger a warning.
+    maxDuplicatesKick: 10, // Amount of duplicate messages that trigger a warning.
+    maxDuplicatesBan: 12, // Amount of duplicate messages that trigger a warning.
+    exemptPermissions: ['ADMINISTRATOR'], // Bypass users with any of these permissions.
+    ignoreBots: true, // Ignore bot messages.
+    verbose: true, // Extended Logs from module.
+    ignoredUsers: [], // Array of User IDs that get ignored.
+    // And many more options... See the documentation.
+});
+
 
 bot.on('guildMemberAdd', member => {
-    
-    
 
 
-    const embed = new Discord.MessageEmbed()
+
+
+    member.guild.channels.get('704040618489413734').send({
+        embed: {
+            color: 3447003,
+            title: "**SERVER NAME** Welcome Bot!",
+            url: "WEBSITE URL",
+            description: "Welcome *" + member + "* to the **Server name** discord server!",
+            fields: [{
+                name: "Information",
+                value: "Some info on the server"
+            }
+            ],
+            timestamp: new Date(),
+            footer: {
+                icon_url: client.user.avatarURL,
+                text: "© NAME OF SERVER 2018 - 2019"
+            }
+        }
+    })
+});
+
+
+    /*const embed = new Discord.MessageEmbed()
             .setTitle("BIENVENUE")
             .setDescription("Bienvenue" + member + " sur **L'olympiome**")
             .setThumbnail(client.user.avatarURL)
             .setTimestamp(new Date())
             .setFooter("© L'OLYMPIOME 2020 - 2021")
 
-    member.guild.channels.find("name", "✨┃bienvenue").send(embed)
+    member.guild.channels.find("name", "test").send("hey")*/
     
 
-});
 
 /*client.on('guildMemberAdd', async member => {
     const channel = member.guild.channels.cache.find(ch => ch.name === 'xvirus9');
@@ -815,4 +854,4 @@ client.on('message', (message)=> {
 )
 
 
-client.login(process.env.TOKEN)
+client.login(token)

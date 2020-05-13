@@ -1,15 +1,20 @@
 {
-  "name": "Darkbot",
-  "version": "1.0.0",
-  "description": "Bot multi-tâches",
+  "name": "darkbot",
+  "version": "0.0.1",
+  "description": "rien",
   "main": "index.js",
   "dependencies": {
-    "discord.js": "^11.5.1",
-    "nodejs": "0.0.0"
+    "canvas": "^2.6.1",
+    "cheerio": "^1.0.0-rc.3",
+    "delay": "^4.3.0",
+    "discord-anti-spam": "^2.4.1",
+    "discord.js": "^12.1.1",
+    "ms": "^2.1.2",
+    "request": "^2.88.2"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "/test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Xvirus9",
   "license": "ISC"
